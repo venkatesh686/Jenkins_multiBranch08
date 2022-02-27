@@ -1,0 +1,10 @@
+node('master')
+{
+    stage('continous download_master')
+     	{
+    git 'git clone https://github.com/sunildevops77/maven.git'
+    }
+    stage('continous build_mater')
+    {
+    sh label: " , script: 'mvn package'
+    }}
